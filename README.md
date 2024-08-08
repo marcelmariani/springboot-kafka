@@ -11,7 +11,6 @@ Prerequisites:
  - kafka-docker-compose.yml:
  - Command to run docker-compose in the console of your choice:
  docker-compose -f kafka-docker-compose.yml up -d
-- Link: https://github.com/Maddytec/bora_prat...
 
 3 - Access Kafdrop Dashboard
  - Browser of your choice:
