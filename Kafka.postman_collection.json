@@ -1,0 +1,40 @@
+{
+	"info": {
+		"_postman_id": "303f8cb1-e401-40c2-b923-0fb8d3f0539c",
+		"name": "Kafka",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5756852",
+		"_collection_link": "https://orange-moon-819999.postman.co/workspace/Spring-Boot~2f88cd47-cc09-4c66-a176-730beec15c17/collection/5756852-303f8cb1-e401-40c2-b923-0fb8d3f0539c?action=share&source=collection_link&creator=5756852"
+	},
+	"item": [
+		{
+			"name": "Send Message",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"message\": \"message test kafka 12:42\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/message/send",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"message",
+						"send"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
