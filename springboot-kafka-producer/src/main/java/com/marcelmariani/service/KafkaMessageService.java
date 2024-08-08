@@ -1,12 +1,9 @@
 package com.marcelmariani.service;
 
-import java.io.IOException;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
 
@@ -24,10 +21,5 @@ public class KafkaMessageService {
 	public void sendMessage(String message) {
 		logger.info("sendMessage -> " + String.format(message));
 		this.kafkaTemplate.send(topicMessageBrokerKafka, message);
-	}
-
-	@KafkaListener(topics = "${topic.message-broker-kafka}", groupId = "group_id")
-	public void readMessage(String message) throws IOException {
-		logger.info("readMessage ->" + String.format(message));
 	}
 }
